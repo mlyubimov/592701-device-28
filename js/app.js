@@ -6,8 +6,6 @@ let linkMap = document.querySelector('.link-map');
 let search = document.querySelector('.search__btn');
 let searchInput = document.getElementById('search-input');
 let afterSearch = document.querySelector('.user-navigation__entrance .footer-item');
-let body = document.body;
-
 // let productArticle = document.querySelectorAll('.product__article .product__img-container');
 // let productArticleImg = document.querySelectorAll('.product__img-new');
 
@@ -57,19 +55,19 @@ if(popupFeedback) {
 			popupFeedback.classList.add('feedback-alert');
 			setTimeout(function () {
 				popupFeedback.classList.remove('feedback-alert');
-			},500);
+			}, 500);
 		} else if (!email.checkValidity()) {
 			email.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
 			setTimeout(function () {
 				popupFeedback.classList.remove('feedback-alert');
-			},500);
+			}, 500);
 		} else if (!text.checkValidity()) {
 			text.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
 			setTimeout(function () {
 				popupFeedback.classList.remove('feedback-alert');
-			},500);
+			}, 500);
 		}
 	};
 	
