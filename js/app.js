@@ -64,20 +64,20 @@ if(popupFeedback) {
 			popupFeedback.classList.add('feedback-alert');
 			setTimeout(() => {
 				popupFeedback.classList.remove('feedback-alert');
-			}, 500);
+			}, 500);		
 		} else if (!email.checkValidity()) {
 			email.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
 			setTimeout(() => {
 				popupFeedback.classList.remove('feedback-alert');
 			}, 500);
+			localStorage.setItem("name", name.value);
 		} else if (!text.checkValidity()) {
 			text.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
 			setTimeout(() => {
 				popupFeedback.classList.remove('feedback-alert');
 			}, 500);
-			localStorage.setItem("name", name.value);
 			localStorage.setItem("email", email.value);
 		} else {
 			localStorage.setItem("name", name.value);
