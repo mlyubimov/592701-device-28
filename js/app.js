@@ -1,13 +1,18 @@
-let popupFeedback = document.querySelector('.popup__write-us');
-let popupFeedbackForm = document.querySelector('.popup__write-us .write-us');
-let popupMap = document.querySelector('.popup__map');
-let popupMapContainer = document.querySelector('.popup__map .popup__map-container');
-let linkMap = document.querySelector('.link-map');
-let search = document.querySelector('.search__btn');
-let searchInput = document.getElementById('search-input');
-let afterSearch = document.querySelector('.user-navigation__entrance .footer-item');
-// let productArticle = document.querySelectorAll('.product__article .product__img-container');
-// let productArticleImg = document.querySelectorAll('.product__img-new');
+const popupFeedback = document.querySelector('.popup__write-us');
+const popupFeedbackOpen = document.querySelector('.link-write-us');
+const popupFeedbackForm = document.querySelector('.popup__write-us .write-us');
+const name = document.getElementById('write-us__username');
+const email = document.getElementById('write-us__email');
+const text = document.getElementById('write-us__textarea');
+const popupFeedbackSubmit = document.querySelector('.write-us__btn');
+const popupFeedbackClose = document.querySelector('.write-us .popup__close');
+const popupMap = document.querySelector('.popup__map');
+const popupMapContainer = document.querySelector('.popup__map .popup__map-container');
+const linkMap = document.querySelector('.link-map');
+const search = document.querySelector('.search__btn');
+const searchInput = document.getElementById('search-input');
+const afterSearch = document.querySelector('.user-navigation__entrance .footer-item');
+const productArticleImg = document.querySelectorAll('.product__img-new');
 
 if(popupFeedback) {
 
@@ -18,25 +23,32 @@ if(popupFeedback) {
 			document.addEventListener('click', e => {
 				let target = e.target;
 				let its_popupFeedbackForm = target == popupFeedbackForm || popupFeedbackForm.contains(target);
-				let its_linkWriteUs = target == document.querySelector('.link-write-us');
+				let its_linkWriteUs = target == popupFeedbackOpen;
 				if (!its_popupFeedbackForm && !its_linkWriteUs) {
 					closeFeedback();	
 				}
 			});
 		};
+		if(window.localStorage) { // вводит в input name и email значения из локального хранилища
+			name.value = localStorage.getItem("name");
+			email.value = localStorage.getItem("email");
+		}
 	};
 
 	const closeFeedback = () => {
 		popupFeedback.classList.add('popup-none');
 		document.body.classList.remove('hidden-overflow');
+		name.classList.remove('invalid');
+		email.classList.remove('invalid');
+		text.classList.remove('invalid');
 	};
-
-	document.querySelector('.link-write-us').addEventListener('click', e => { // открытие формы
+	
+	popupFeedbackOpen.addEventListener('click', e => { // открытие формы
 		e.preventDefault();
 		openFeedback();
 	});
 
-	document.querySelector('.write-us .popup__close').onclick = () => { // закрытие формы
+	popupFeedbackClose.onclick = () => { // закрытие формы
 		closeFeedback();
 	};
 
@@ -46,28 +58,30 @@ if(popupFeedback) {
 		} 
 	});
 
-	document.querySelector('.write-us__btn').onclick = () => { // проверка на валидность
-		let name = document.getElementById('write-us__username');
-		let email = document.getElementById('write-us__email');
-		let text = document.getElementById('write-us__textarea');
+	popupFeedbackSubmit.onclick = () => { // проверка на валидность
 		if (!name.checkValidity()) {
 			name.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
-			setTimeout(function () {
+			setTimeout(() => {
 				popupFeedback.classList.remove('feedback-alert');
 			}, 500);
 		} else if (!email.checkValidity()) {
 			email.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
-			setTimeout(function () {
+			setTimeout(() => {
 				popupFeedback.classList.remove('feedback-alert');
 			}, 500);
 		} else if (!text.checkValidity()) {
 			text.classList.add('invalid');
 			popupFeedback.classList.add('feedback-alert');
-			setTimeout(function () {
+			setTimeout(() => {
 				popupFeedback.classList.remove('feedback-alert');
 			}, 500);
+			localStorage.setItem("name", name.value);
+			localStorage.setItem("email", email.value);
+		} else {
+			localStorage.setItem("name", name.value);
+			localStorage.setItem("email", email.value);
 		}
 	};
 	
@@ -120,23 +134,12 @@ if(search) {
 	};
 }
 
-// if(productArticleImg) { // добавление aria-label через поиск элемента
-// 	let i = 0;
-// 	let j = productArticleImg.length;
-// 	while (i < j) {
-// 		productArticleImg[i].querySelector('img').setAttribute('aria-label', 'Новый товар');
-// 		i++
-// 	}
-// }
-
-// if(productArticle) { // добавление aria-label через поиск наличия псевдокласса у элемента
-// 	let i = 0;
-// 	let j = productArticle.length;
-// 	while (i < j) {
-// 		let content = window.getComputedStyle(productArticle[i], ':before').content;
-// 		if(content[1] == 'n' && content[2] == 'e' && content[3] == 'w') { // т.к. content является массивом из пяти элементов: [",n,e,w,"]
-// 			productArticle[i].querySelector('img').setAttribute('aria-label', 'Новый товар');
-// 		}
-// 		i++;
-// 	}
-// }
+if(productArticleImg) { // добавление нового alt через поиск элемента
+	let i = 0;
+	let j = productArticleImg.length;
+	while (i < j) {
+ 		let altArray = [productArticleImg[i].querySelector('img').getAttribute('alt').split(' ', 1).toString(),'нового товара',productArticleImg[i].querySelector('img').getAttribute('alt').split(' ').slice(1).join(' ')]
+			productArticleImg[i].querySelector('img').setAttribute('alt', altArray.join(' '));
+		i++
+	}
+}
