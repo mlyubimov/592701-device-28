@@ -23,6 +23,7 @@
 	--basic-black: #000000;
 	--basic-black-active: rgba(0, 0, 0, 0.3);
 	--background-price-bar: rgba(0, 0, 0, 0.2);
+	--shadow: rgba(0, 0, 0, 0.15);
 	--basic-dark: #363636;
 	--basic-grey: #464646;
 	--basic-white-active: rgba(255, 255, 255, 0.3);
@@ -639,6 +640,7 @@ a {
 --------------------- main ---------------------
 ----------------------------------------------*/
 
+.slider-main,
 .main__promo {
 	position: relative;
 }
@@ -743,14 +745,14 @@ a {
 	left: -2px;
 }
 
-.promo__link-container .promo__slider-container {
-	display: flex;
-	position: relative;
-	top: -8px;
-	right: 12px;
+.promo__slider-container {
+	position: absolute;
+	right: 100px;
+	bottom: 184px;
 	margin-right: 23px;
 	width: auto;
 	padding: 0;
+	z-index: 1;
 }
 
 .promo__slider-container>label {
@@ -808,9 +810,9 @@ a {
 	height: 12px;
 }
 
-.slider-main input[id="selfie-stick"]:checked~.main__promo .selfie-stick::before,
-.slider-main input[id="fitness-tracker"]:checked~.main__promo .fitness-tracker::before,
-.slider-main input[id="quadrocopter"]:checked~.main__promo .quadrocopter::before {
+.slider-main input[id="selfie-stick"]:checked~.promo__slider-container .selfie-stick::before,
+.slider-main input[id="fitness-tracker"]:checked~.promo__slider-container .fitness-tracker::before,
+.slider-main input[id="quadrocopter"]:checked~.promo__slider-container .quadrocopter::before {
 	content: url(../img/svg/slider-button.svg);
 	position: absolute;
 	width: 12px;
@@ -823,9 +825,9 @@ a {
 	display: flex;
 }
 
-.slider-main input[id="selfie-stick"]:focus-within~.main__promo .selfie-stick::before,
-.slider-main input[id="fitness-tracker"]:focus-within~.main__promo .fitness-tracker::before,
-.slider-main input[id="quadrocopter"]:focus-within~.main__promo .quadrocopter::before {
+.slider-main input[id="selfie-stick"]:focus-within~.promo__slider-container .selfie-stick::before,
+.slider-main input[id="fitness-tracker"]:focus-within~.promo__slider-container .fitness-tracker::before,
+.slider-main input[id="quadrocopter"]:focus-within~.promo__slider-container .quadrocopter::before {
 	left: -2px;
 	padding: 0 2px 4px 2px;
 	box-shadow: 0 0 0 2px var(--basic-black);
@@ -1140,7 +1142,7 @@ a {
 	left: 0;
 	width: 8px;
 	height: 8px;
-	border: 2px solid #E5E5E5;
+	border: 2px solid var(--basic-grey-light);
 	box-sizing: border-box;
 	border-radius: 50%;
 }
@@ -1397,7 +1399,7 @@ a {
 	padding: 92px 100px 69px 100px;
 	box-sizing: border-box;
 	background-color: var(--basic-white);
-	box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 10px 16px var(--shadow);
 }
 
 .popup__write-us form,
@@ -1566,7 +1568,7 @@ a {
 }
 
 .popup__map-container iframe {
-	box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 10px 16px var(--shadow);
 }
 
 .popup__map .map-up {
