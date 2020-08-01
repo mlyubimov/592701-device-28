@@ -1,0 +1,160 @@
+@font-face {
+	font-family: 'Gilroy EB';
+	src: url("../fonts/gilroy-extra-bold.woff");
+	font-style: normal;
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Gilroy R';
+	src: url("../fonts/gilroy-regular.woff");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy L';
+	src: url("../fonts/gilroy-light.woff");
+	font-style: normal;
+	font-weight: 300;
+}
+
+:root {
+	--basic-black: #000000;
+	--basic-black-active: rgba(0, 0, 0, 0.3);
+	--background-price-bar: rgba(0, 0, 0, 0.2);
+	--shadow: rgba(0, 0, 0, 0.15);
+	--basic-dark: #363636;
+	--basic-grey: #464646;
+	--basic-white-active: rgba(255, 255, 255, 0.3);
+	--basic-half-grey: #7e7e7e;
+	--color-disabled: #A6A6A6;
+	--background-catalog-img: rgba(238, 238, 238, 0.7);
+	--basic-white-hover: rgba(255, 255, 255, 0.7);
+	--background-pagination-button: #d9d9d9;
+	--background-filter: #dcdcdc;
+	--basic-grey-light: #e5e5e5;
+	--background-popup-hover: #eaeaea;
+	--background-pagination: #ebebeb;
+	--background-popup: #F2F2F2;
+	--basic-white: #ffffff;
+	--basic-yellow: #FFC600;
+	--special-yellow-dark: #F0C52E;
+	--special-yellow: #F7E296;
+	--special-green: #91C92F;
+	--status: #F6DADA;
+	--linear-catalog-header: linear-gradient(to right, var(--background-filter) 0, var(--background-filter) 28%, var(--basic-grey-light) 28%, var(--basic-grey-light) 100%);
+	--linear-catalog-content: linear-gradient(to right, var(--basic-grey-light) 0, var(--basic-grey-light) 28%, var(--basic-white) 28%, var(--basic-white) 100%);
+}
+
+.site-wrapper {
+	width: 1160px;
+	margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	color: var(--basic-black);
+}
+
+.body {
+	min-width: 1200px;
+	padding-top: 40px;
+	margin: 0;
+	&__popularity {
+		margin-top: 64px;
+	}
+	&__services {
+		margin-top: 165px;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.hidden-overflow {
+	overflow: hidden;
+}
+
+.font-sans-300 {
+	font-family: 'Open Sans','Verdana',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.font-sans-400 {
+	font-family: 'Open Sans','Verdana',sans-serif;
+    font-weight: 400;
+}
+
+.font-gilroy-eb {
+	font-family: 'Gilroy EB', 'Tahoma', sans-serif;
+}
+
+.font-gilroy-l {
+	font-family: 'Gilroy L', 'Tahoma', sans-serif;
+}
+
+.btn {
+	display: block;
+    position: relative;
+    padding: 8px 0;
+	width: 220px;
+	border: none;
+	color: var(--basic-black);
+	background-color: transparent;
+    box-sizing: border-box;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-align: center;
+	z-index: 1;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--special-yellow-dark);
+		z-index: -1;
+		transform: scaleY(0.2);
+		transition: transform .3s ease-in-out;
+	}
+
+	&:focus-within::before,
+	&:hover::before {
+		transform: scaleY(1);
+	}
+	
+	&:active {
+		color: var(--basic-black-active);
+	}
+}

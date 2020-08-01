@@ -1,0 +1,44 @@
+.catalog {
+	&__title {
+		margin: 0 0 30px 60px;
+		font-size: 47px;
+		line-height: 58px;
+	}
+
+	&__breadcrumbs {
+		margin-top: 44px;
+	}
+
+	&__flex {
+		display: flex;
+	}
+
+	&__header {
+		margin-top: 50px;
+		background: var(--linear-catalog-header);
+		
+		&-filter {
+			padding: 25px 192px 25px 60px;
+			background-color: var(--background-filter);
+		}
+
+		&-title {
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+		}
+	}
+
+	&__content {
+		background: var(--linear-catalog-content);
+	}
+
+	&__product {
+		margin: 69px 72px;
+	}
+
+	&__pagination {
+		margin-top: 39px;
+	}
+}

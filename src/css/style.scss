@@ -1,0 +1,22 @@
+@import "variables";
+
+@import "first";
+@import "keyframes";
+@import "header";
+
+// index
+@import "index/slider";
+@import "index/popularity";
+@import "index/services";
+@import "index/partners";
+@import "index/about-contacts";
+@import "index/popup";
+
+// catalog
+@import "catalog/catalog";
+@import "catalog/breadcrumbs";
+@import "catalog/sorting";
+@import "catalog/filter";
+@import "catalog/product";
+
+@import "footer";

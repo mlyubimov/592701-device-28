@@ -1,0 +1,171 @@
+.slider-radio::before {
+	content: url(../img/svg/slider-button-empty.svg);
+	width: 12px;
+	height: 12px;
+}
+
+.one::after {
+	content: '01';
+}
+
+.two::after {
+	content: '02';
+}
+
+.three::after {
+	content: '03';
+}
+
+.promo {
+	position: relative;
+
+	&__slider-container {
+		position: absolute;
+		right: 77px;
+		bottom: 184px;
+		margin-right: 23px;
+		z-index: 1;
+	}
+
+	&__radio {
+		margin-right: 30px;
+		&:before {
+			position: absolute;
+		}
+		&--last {
+			margin: auto;
+		}
+	}
+
+	&__selfie-stick,
+	&__fitness-tracker,
+	&__quadrocopter {
+		display: none;
+	}
+
+	&__input[id="selfie-stick"]:checked~.promo__slider-container .selfie-stick,
+	&__input[id="fitness-tracker"]:checked~.promo__slider-container .fitness-tracker,
+	&__input[id="quadrocopter"]:checked~.promo__slider-container .quadrocopter {
+		&:before {
+			content: url(../img/svg/slider-button.svg);
+		}
+	}
+
+	&__input[id="selfie-stick"]:checked~.main__promo .promo__selfie-stick,
+	&__input[id="fitness-tracker"]:checked~.main__promo .promo__fitness-tracker,
+	&__input[id="quadrocopter"]:checked~.main__promo .promo__quadrocopter {
+		display: flex;
+	}
+
+	&__img {
+		position: absolute;
+		animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+		&-selfie-stick {
+			top: -130px;
+			left: 89px;
+		}
+		&-fitness-tracker {
+			top: -118px;
+			left: 116px;
+		}
+		&-quadrocopter {
+			top: -62px;
+			left: 30px;
+		}
+	}
+	&__content {
+		position: relative;
+		top: -36px;
+		width: 495px;
+		padding-left: 600px;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100px;
+			height: 7px;
+			left: 600px;
+			top: -60px;
+			background-color: var(--basic-white);
+		}
+		&:after {
+			position: absolute;
+			top: -110px;
+			right: -19px;
+			font-family: 'Gilroy EB','Tahoma',sans-serif;
+			font-style: normal;
+			font-weight: 800;
+			font-size: 179px;
+			line-height: 219px;
+			color: var(--basic-white);
+			z-index: 0;
+			animation: swing-in-right-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+		}
+		&-title {
+			position: relative;
+			margin: 0;
+			font-weight: 800;
+			font-size: 47px;
+			line-height: 58px;
+			margin-bottom: 26px;
+			z-index: 1;
+			animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
+		&-text {
+			font-size: 15px;
+			line-height: 20px;
+			margin: 0;
+			animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
+	}
+
+	&__title {
+		&-selfie-stick {
+			padding-right: 105px;
+		}
+		
+		&-fitness-tracker {
+			padding-right: 100px;
+		}
+	}
+
+	&__link-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 51px 0 0 2px;
+		padding: 0;
+	}
+
+	&__btn {
+		animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+
+		&:before {
+			animation: btn-line 0.4s ease-in-out;
+		}
+	}
+
+	&__table {
+		margin: 49px 0 0 -1px;
+		animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+		&-item {
+			padding: 0 59px 13px 0;
+			letter-spacing: .1em;
+			&--last {
+				padding-right: 0;
+			}
+		}
+
+		&-head-item {
+			font-size: 36px;
+			line-height: 42px;
+		}
+
+		&-body-item {
+			font-size: 13px;
+			line-height: 15px;
+		}
+	}
+}
+

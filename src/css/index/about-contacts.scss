@@ -1,0 +1,126 @@
+.about-contacts {
+	&-container{
+		display: flex;
+	justify-content: space-between;
+	}
+
+	&--index {
+		margin-top: 66px;
+	}
+
+	&__section {
+		position: relative;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			width: 80px;
+			height: 7px;
+			background-color: var(--basic-dark);
+		}
+	}
+	
+	&__title {
+		margin-top: 57px;
+		font-size: 47px;
+		line-height: 58px;
+		letter-spacing: .2em;
+	}
+
+	&__text {
+		margin-top: 40px;
+		font-size: 15px;
+		line-height: 28px;
+	}
+
+	&__btn {
+		margin-top: 68px;
+		padding: 8px 17px 8px 24px;
+		width: 260px;
+	}
+
+	&__popup {
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+}
+
+.about-us {
+	width: 473px;
+
+	&__list {
+		margin-top: 60px;
+		padding: 0;
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 15px;
+		padding-left: 32px;
+		font-size: 16px;
+		line-height: 28px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 8px;
+			height: 8px;
+			border: 2px solid var(--basic-grey-light);
+			box-sizing: border-box;
+			border-radius: 50%;
+		}
+	}
+}
+
+.link-map {
+	display: block;
+	position: relative;
+	padding: 0;
+	width: 560px;
+	height: 222px;
+
+	&__img {
+		transition: .3s ease-in-out;
+	}
+
+	&:focus-within,
+	&:hover {
+		.link-map__img {
+			filter: brightness(.4);
+		}
+
+		&:before {
+			content: 'Открыть карту';
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			font-family: 'Gilroy EB','Tahoma',sans-serif;
+			font-size: 30px;
+			line-height: 58px;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+			text-align: center;
+			color: var(--basic-white);
+			z-index: 999;
+		}
+	}
+}
+
+.contacts {
+	width: 560px;
+
+	&__map {
+		margin-top: 40px;
+	}
+
+	&__btn {
+		margin-top: 75px;
+	}
+}

@@ -1,0 +1,68 @@
+.popularity {
+	display: flex;
+	justify-content: space-between;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+
+	&__item {
+		width: 160px;
+		margin-bottom: 20px;
+		&:not(:nth-of-type(6n)) {
+			margin-right: 40px;
+		}
+		&:focus-within,
+		&:hover {
+			.popularity__img-container {
+				background-color: var(--special-yellow-dark);
+				-webkit-animation: article-radius 0.6s;
+				animation: article-radius 0.6s;
+			}
+		}
+		&:active {
+			.popularity__item-text,
+			.popularity__img {
+				opacity: .3;
+			}
+		}
+	}
+
+	&__img {
+		&-container {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 160px;
+			height: 160px;
+			background-color: var(--special-yellow);
+			pointer-events: none;
+			transition: background-color 0.3s ease-in-out;
+		}
+		&-bg {
+			position: absolute;
+			width: 160px;
+			height: 160px;
+			background-color: var(--special-yellow);
+		}
+	}
+
+	&__item-text {
+		margin: 38px 0 0 1px;
+		color: var(--basic-black);
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: 0.05em;
+	}
+
+	&__monopods-for-selfie-text {
+		padding-right: 25px;
+	}
+
+	&__fitness-bracelet-text {
+		letter-spacing: 0;
+	}
+}

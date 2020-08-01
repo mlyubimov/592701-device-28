@@ -1,0 +1,70 @@
+.sorting {
+	display: flex;
+	align-items: center;
+	padding: 25px 0 25px 72px;
+    background-color: var(--basic-grey-light);
+
+	&__title {
+		margin-right: 72px;
+	}
+
+	&__list,
+	&__arrow {
+		display: flex;
+	}
+
+	&__list {
+		flex-wrap: wrap;
+		position: relative;
+		top: -1px;
+		width: 512px;
+	}
+
+	&__link {
+		font-size: 14px;
+   		line-height: 19px;
+	}
+
+	&__arrow {
+		align-items: center;
+
+		&-item {
+			opacity: .2;
+
+			&:not(:last-child) {
+				margin-right: 23px;
+			}
+
+			&:focus-within,
+			&:hover {
+				opacity: .6;
+			}
+
+			&:active {
+				opacity: 1;
+			}
+		}
+
+		&--on {
+			opacity: 1;
+		}
+	}
+
+	&__item {
+		opacity: .3;
+
+		&:not(&--on):focus-within,
+		&:not(&--on):hover {
+			opacity: .6;
+		}
+
+		&--on,
+		&:not(&--on):active {
+			opacity: 1;
+		}
+
+		&:not(:last-child) {
+			margin-right: 31px;
+		}	
+	}
+}

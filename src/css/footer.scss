@@ -1,0 +1,214 @@
+.footer {
+	padding: 46px 0 50px;
+	background-color: var(--basic-dark);
+
+	&--index {
+		margin-top: 77px;
+	}
+
+	&--flex {
+		display: flex;
+	}
+
+	&-container {
+		justify-content: space-between;
+	}
+
+	&__address {
+		margin-top: 36px;
+		color: var(--basic-white);
+		font-size: 15px;
+
+		&-container {
+			width: 203px;
+			position: relative;
+			margin-top: 18px;
+			padding-bottom: 87px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 27px;
+			width: 80px;
+			height: 7px;
+			background-color: var(--basic-yellow);
+		}
+	}
+	
+	&__user-navigation {
+		flex-direction: column;
+	}
+
+	&__social-icon {
+		margin: 0 10px;
+		margin-bottom: 10px;
+		opacity: .3;
+
+		&:focus-within,
+		&:hover {
+			opacity: .6;
+		}
+
+		&:active {
+			opacity: .1;
+		}
+	}
+	
+	&__user-navigation {
+		position: relative;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	&__links {
+		flex-direction: column;
+		align-items: flex-end;
+		max-width: 815px;
+	}
+	
+	&__navigation-container {
+		margin-top: 71px;
+	}
+	
+	&__site-navigation {
+		position: relative;
+		margin-right: 180px;
+		width: 470px;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.user-navigation {
+	&-container {
+		margin: 0;
+		padding: 0;
+		top: 0;
+		right: 0;
+		justify-content: flex-end;
+	}
+
+	&__item {
+		&-footer {
+			position: relative;
+			margin-left: 43px;
+
+			&--exit {
+				margin-left: 0;
+			}
+		}
+
+		&-link {
+			padding-left: 22px;
+			color: var(--basic-white-hover);
+
+			&:focus-within,
+			&:hover {
+				color: var(--basic-white);
+
+				&:before {
+					opacity: .6;
+				}
+			}
+
+			&:active {
+				opacity: .3;
+
+				&:before {
+					opacity: .3;
+				}
+			}
+
+			&--footer {
+				font-size: 15px;
+			}
+		}
+	}
+
+	&__entrance-footer,
+	&__comparison-footer,
+	&__basket-footer {
+		&:before {
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	&__entrance-footer::before {
+		content: url(../img/svg/user-footer.svg);
+	}
+	
+	&__comparison-footer::before {
+		content: url(../img/svg/compare-footer.svg);
+	}
+	
+	&__basket-footer::before {
+		content: url(../img/svg/cart-footer.svg);
+	}
+
+	&__phone-footer {
+		margin-top: 1px;
+		color: var(--basic-white);
+		font-size: 15px;
+
+		&:focus-within,
+		&:hover {
+			opacity: .6;
+		}
+
+		&:active {
+			opacity: .3;
+		}
+	}
+
+	&__logo-footer {
+		position: relative;
+		margin-top: 67px;
+
+		&:focus-within,
+		&:hover {
+			opacity: .6;
+		}
+
+		&:active {
+			opacity: .3;
+		}
+	}
+}
+
+.site-navigation {
+	&__list {
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item-footer {
+		margin: 0 16px;
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		&--white {
+			color: var(--basic-white);
+		}
+
+		&:focus-within,
+		&:hover {
+			opacity: .6;
+		}
+
+		&:active {
+			opacity: .3;
+		}
+	}
+}
+
+.social-container {
+	flex-wrap: wrap;
+
+	&--footer {
+		margin: 57px 0 0 -2px;
+	}
+}

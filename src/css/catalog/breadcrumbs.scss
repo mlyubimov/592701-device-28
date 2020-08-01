@@ -1,0 +1,31 @@
+.breadcrumbs {
+	&__list {
+		display: flex;
+		margin-left: 60px;
+		width: 1040px;
+	}
+
+	&__item {
+		margin-right: 20px;
+
+		&:not(:last-child)::after {
+			content: url(../img/svg/nav-arrow.svg);
+		}
+	}
+
+	&__link {
+		margin-right: 13px;
+		font-size: 14px;
+		line-height: 19px;
+		opacity: .3;
+
+		&[href]:focus-within,
+		&[href]:hover {
+			opacity: .6;
+		}
+
+		&[href]:active {
+			opacity: .1;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+.services {
+	min-height: 288px;
+	background-color: var(--basic-grey-light);
+	z-index: -1;
+
+	&__container {
+		display: flex;
+		position: relative;
+		top: -20px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: -81px;
+			left: 277px;
+			width: 7px;
+			height: 320px;
+			background-color: var(--basic-black);
+		}
+	}
+
+	&__btn {
+		width: 160px;
+		padding: 8px 19px;
+		margin-bottom: 21px;
+		&:active {
+			color: var(--special-yellow);
+			&::before {
+				background-color: var(--basic-black);
+			}
+		}
+	}
+
+	&__item {
+		display: none;
+		flex-direction: column;
+		position: relative;
+		top: -15px;
+	}
+
+	&__info {
+		margin-top: 6px;
+		padding-left: 240px;
+	}
+
+	&__input[id="delivery"]:checked~.label-container .label__delivery,
+	&__input[id="warranty"]:checked~.label-container .label__warranty, 
+	&__input[id="credit"]:checked~.label-container .label__credit {
+		color: var(--special-yellow);
+		&:before {
+			padding-right: 118px;
+			background-color: var(--basic-black);
+			transform: scaleY(1);
+			transition: padding-right .3s ease-in-out;
+		}
+	}
+
+	&__input[id="delivery"]:checked~.services__info .services__delivery,
+	&__input[id="warranty"]:checked~.services__info .services__warranty, 
+	&__input[id="credit"]:checked~.services__info .services__credit {
+		display: flex;
+		animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 47px;
+		line-height: 58px;
+		letter-spacing: .2em;
+	}
+
+	&__text {
+		width: 574px; 
+		margin: 0;
+		padding-right: 40px;
+		font-size: 15px;
+		line-height: 28px;
+		letter-spacing: .1em;
+		box-sizing: border-box;
+		&--first {
+			margin-top: 40px;
+		}
+	}
+
+	&__delivery-text {
+		padding-right: 60px;
+		box-sizing: border-box;
+	}
+
+	&__warranty-text {
+		line-height: 30px;
+	}
+
+	&__credit-text {
+		width: 574px;
+		margin-top: 40px;
+		font-size: 15px;
+		line-height: 28px;
+		letter-spacing: .1em;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		right: -184px;
+	}
+}

@@ -1,0 +1,15 @@
+const popupFeedback = document.querySelector('.popup__write-us');
+const popupFeedbackOpen = document.querySelector('.contacts__link');
+const popupFeedbackForm = document.querySelector('.popup__write-us .write-us-form');
+const name = document.getElementById('write-us__username');
+const email = document.getElementById('write-us__email');
+const text = document.getElementById('write-us__textarea');
+const popupFeedbackSubmit = document.querySelector('.write-us__btn');
+const popupFeedbackClose = document.querySelector('.write-us-form .popup__close');
+const popupMap = document.querySelector('.popup__map');
+const popupMapContainer = document.querySelector('.popup__map .popup-container');
+const linkMap = document.querySelector('.link-map');
+const search = document.querySelector('.search-form__btn');
+const searchInput = document.getElementById('search-form__input');
+const afterSearch = document.querySelector('.user-navigation__entrance .footer-item');
+const productArticleImg = document.querySelectorAll('.product__img--new');
