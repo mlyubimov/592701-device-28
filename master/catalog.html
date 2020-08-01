@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Каталог | HTML Academy: Девайс</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body">
+
+	<header class="header site-wrapper">
+		<a class="logo-link" href="index.html">
+			<img class="logo header__logo" src="img/svg/logo-device.svg" width="163" height="35" alt="Device">
+		</a>
+		<section class="header-main">
+			<h1 class="visually-hidden">Device</h1>
+			<nav class="header__navigation">
+				<ul class="user-navigation header__list">
+					<li class="header__item user-navigation__item user-navigation__item--first">
+						<form class="search-form header__search-form" action="https://echo.htmlacademy.ru" method="get">
+							<label class="visually-hidden" for="search-input">Поиск по сайту</label>
+							<input id="search-form__input" class="font-sans-300 search-form__input" name="site-search"
+								type="search" placeholder="Поиск по сайту" title="Введите запрос для поиска по сайту"
+								required>
+							<button class="search-form__btn" type="submit">Найти</button>
+						</form>
+					</li>
+					<li
+						class="header__item user-navigation__item user-navigation__entrance user-navigation__user font-sans-300">
+						<a href="#" class="header__link user-navigation__link user-navigation__entrance-link">Валентин
+							Петухов</a>
+					</li>
+					<li class="header__item user-navigation__item user-navigation__exit font-sans-300">
+						<a href="#" class="header__link user-navigation__link user-navigation__exit-link">Выйти</a>
+					</li>
+					<li class="header__item user-navigation__item user-navigation__comparison font-sans-300">
+						<a href="#"
+							class="header__link user-navigation__link user-navigation__comparison-link">Сравнить</a>
+					</li>
+					<li class="header__item user-navigation__item user-navigation__basket font-sans-300">
+						<a href="#" class="header__link user-navigation__link user-navigation__basket-link">Корзина</a>
+					</li>
+				</ul>
+				<ul class="site-navigation header__site-navigation header__list">
+					<li class="site-navigation__item site-navigation__catalog font-gilroy-eb">
+						<a class="header__link site-navigation__link site-navigation__catalog-link" href="#"
+							aria-label="Открыть каталог товаров">Каталог товаров</a>
+						<div class="dropdown">
+							<ul class="dropdown__list">
+								<li class="dropdown__item font-sans-300">
+									<a class="header__link dropdown__link" href="#"
+										aria-label="Открыть страницу товаров виртуальной реальности">Виртуальная
+										реальность</a>
+								</li>
+								<li class="dropdown__item font-sans-300">
+									<a class="header__link dropdown__link" href="catalog.html"
+										aria-label="Открыть страницу моноподов для селфи">Моноподы для селфи</a>
+								</li>
+								<li class="dropdown__item font-sans-300">
+									<a class="header__link dropdown__link" href="#"
+										aria-label="Открыть страницу экшн-камер">Экшн-камеры</a>
+								</li>
+							</ul>
+							<ul class="dropdown__list">
+								<li class="dropdown__item font-sans-300">
+									<a class="header__link dropdown__link" href="#"
+										aria-label="Открыть страницу фитнес-браслетов">Фитнес-браслеты</a>
+								</li>
+								<li class="dropdown__item font-sans-300">
+									<a class="header__link dropdown__link" href="#"
+										aria-label="Открыть страницу умных часов">Умные
+										часы</a>
+								</li>
+							</ul>
+							<ul class="dropdown__list dropdown__list--last">
+								<li class="dropdown__item font-sans-300">
+									<a class="header__link dropdown__link" href="#"
+										aria-label="Открыть страницу квадрокоптеров">Квадрокоптер</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="site-navigation__item site-navigation__delivery font-gilroy-eb">
+						<a class="header__link site-navigation__link" href="#"
+							aria-label="Открыть страницу доставки">Доставка</a>
+					</li>
+					<li class="site-navigation__item site-navigation__guarantee font-gilroy-eb">
+						<a class="header__link site-navigation__link" href="#"
+							aria-label="Открыть страницу с информацией о гарантии">Гарантия</a>
+					</li>
+					<li class="site-navigation__item font-gilroy-eb">
+						<a class="header__link site-navigation__link" href="#"
+							aria-label="Открыть страницу наших контактов">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+
+	<main class="main catalog">
+		<div class="site-wrapper breadcrumbs catalog__breadcrumbs">
+			<h1 class="catalog__title font-gilroy-eb">Моноподы для селфи</h1>
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link font-sans-300" href="index.html"
+						aria-label="Перейти на главную страницу">Главная</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link font-sans-300" href="#" aria-label="Открыть каталог товаров">Каталог
+						товаров</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link font-sans-300">Моноподы для селфи</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="catalog__header">
+			<div class="site-wrapper catalog__flex">
+				<p class="catalog__header-title catalog__header-filter font-gilroy-eb">Фильтр:</p>
+				<section class="sorting">
+					<h2 class="catalog__header-title sorting__title font-gilroy-eb">Сортировка:</h2>
+					<ul class="sorting__list">
+						<li class="sorting__item sorting__item--on">
+							<a class="sorting__link font-sans-400" aria-label="Отсортировать по цене">По цене</a>
+						</li>
+						<li class="sorting__item">
+							<a class="sorting__link font-sans-400" href="#" aria-label="Отсортировать по типу">По
+								типу</a>
+						</li>
+						<li class="sorting__item">
+							<a class="sorting__link font-sans-400" href="#"
+								aria-label="Отсортировать по популярности">По популярности</a>
+						</li>
+					</ul>
+					<div class="sorting__arrow">
+						<div class="sorting__arrow-item">
+							<a href="#" aria-label="Сортировка по возрастанию">
+								<img src="img/svg/icon-up-dir.svg" width="11" height="10" alt="Стрелка вверх">
+							</a>
+						</div>
+						<div class="sorting__arrow-item sorting__arrow--on">
+							<a href="#" aria-label="Сортировка по убыванию">
+								<img src="img/svg/icon-down-dir.svg" width="11" height="10" alt="Стрелка вниз">
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="catalog__content">
+			<div class="site-wrapper catalog__flex">
+				<aside class="filter">
+					<form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+						<fieldset class="filter__fieldset filter__price price">
+							<legend class="filter__legend font-gilroy-eb">Стоимость</legend>
+							<div class="price__bar">
+								<a href="#" class="price__toggle price__toggle-min"
+									aria-label="Ползунок для выбора минимальной цены">
+									<img src="img/svg/filter-button.svg" width="20" height="23"
+										alt="Ползунок минимальной цены">
+								</a>
+								<a href="#" class="price__toggle price__toggle-max"
+									aria-label="Ползунок для выбора максимальной цены">
+									<img src="img/svg/filter-button.svg" width="20" height="23"
+										alt="Ползунок максимальной цены">
+								</a>
+								<div class="price__bar-scale"></div>
+							</div>
+							<div class="price__value">
+								<label class="price__label price__label-min font-gilroy-l"
+									for="filter__price-min">от</label>
+								<input class="price__value-input price__value-min font-gilroy-l" type="text"
+									id="filter__price-min" name="filter__price-min" value="0" title="Минимальная цена">
+								<label class="price__label price__label-max font-gilroy-l"
+									for="filter__price-max">до</label>
+								<input class="price__value-input price__value-max font-gilroy-l" type="text"
+									id="filter__price-max" name="filter__price-max" value="5000"
+									title="Максимальная цена">
+							</div>
+						</fieldset>
+						<fieldset class="filter__fieldset color">
+							<legend class="filter__legend font-gilroy-eb">Цвет</legend>
+							<ul>
+								<li class="color__item">
+									<input type="checkbox" class="visually-hidden color__input filter__input"
+										id="filter__color-black" name="filter__color-black" title="Чёрный цвет" checked>
+									<label for="filter__color-black"
+										class="font-sans-300 color__label filter__label">Чёрный</label>
+								</li>
+								<li class="color__item">
+									<input type="checkbox" class="visually-hidden color__input filter__input"
+										id="filter__color-white" name="filter__color-white" title="Белый цвет">
+									<label for="filter__color-white"
+										class="font-sans-300 color__label filter__label">Белый</label>
+								</li>
+								<li class="color__item">
+									<input type="checkbox" class="visually-hidden color__input filter__input"
+										id="filter__color-blue" name="filter__color-blue" title="Синий цвет" checked>
+									<label for="filter__color-blue"
+										class="font-sans-300 color__label filter__label">Синий</label>
+								</li>
+								<li class="color__item">
+									<input type="checkbox" class="visually-hidden color__input filter__input"
+										id="filter__color-red" name="filter__color-red" title="Красный цвет" checked disabled>
+									<label for="filter__color-red"
+										class="font-sans-300 color__label filter__label">Красный</label>
+								</li>
+								<li class="color__item">
+									<input type="checkbox" class="visually-hidden color__input filter__input"
+										id="filter__color-pink" name="filter__color-pink" title="Розовый цвет">
+									<label for="filter__color-pink"
+										class="font-sans-300 color__label filter__label">Розовый</label>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__fieldset bluetooth">
+							<legend class="filter__legend font-gilroy-eb">Bluetooth</legend>
+							<ul>
+								<li class="bluetooth__item">
+									<input type="radio" class="visually-hidden bluetooth__input filter__input"
+										id="filter__bluetooth-yes" name="filter__bluetooth" value="yes"
+										title="Присутствует bluetooth" checked>
+									<label for="filter__bluetooth-yes"
+										class="font-sans-300 bluetooth__label filter__label">Есть</label>
+								</li>
+								<li class="bluetooth__item">
+									<input type="radio" class="visually-hidden bluetooth__input filter__input"
+										id="filter__bluetooth-no" name="filter__bluetooth" value="no"
+										title="Отсутствует bluetooth">
+									<label for="filter__bluetooth-no"
+										class="font-sans-300 bluetooth__label filter__label">Нет</label>
+								</li>
+							</ul>
+						</fieldset>
+						<button class="btn font-gilroy-eb" type="submit">Показать</button>
+					</form>
+				</aside>
+				<section class="catalog__product product">
+					<h2 class="visually-hidden">Каталог</h2>
+					<div class="product-container">
+						<article class="product__article product__amateur">
+							<div class="product__img-container" tabindex="0">
+								<img src="img/amateur-selfie-stick.jpg" width="360" height="380"
+									alt="Изображение любительской селфи-палки">
+								<div class="product__link-container">
+									<a href="#" class="btn product__btn font-gilroy-eb"
+										aria-label="Добавить товар в корзину">В корзину</a>
+									<a href="#" class="product__link-comparison font-sans-300"
+										aria-label="Добавить товар в список сравнения">Добавить к сравнению</a>
+								</div>
+							</div>
+							<div class="product__article-text">
+								<a href="#">
+									<h3 class="font-gilroy-eb">Любительская селфи-палка</h3>
+								</a>
+								<p class="product__article-paragraph font-gilroy-l">500 руб.</p>
+							</div>
+						</article>
+						<article class="product__article product__professional">
+							<div class="product__img-container" tabindex="0">
+								<img src="img/professional-selfie-stick.jpg" width="360" height="380"
+									alt="Изображение профессиональной селфи-палки">
+								<div class="product__link-container">
+									<a href="#" class="btn product__btn font-gilroy-eb"
+										aria-label="Добавить товар в корзину">В корзину</a>
+									<a href="#" class="product__link-comparison font-sans-300"
+										aria-label="Добавить товар в список сравнения">Добавить к сравнению</a>
+								</div>
+							</div>
+							<div class="product__article-text">
+								<a href="#">
+									<h3 class="font-gilroy-eb">Профессиональная селфи-палка</h3>
+								</a>
+								<p class="product__article-paragraph font-gilroy-l">1 500 руб.</p>
+							</div>
+						</article>
+						<article class="product__article product__unsinkable">
+							<div class="product__img-container" tabindex="0">
+								<img src="img/unsinkable-selfie-stick.jpg" width="360" height="380"
+									alt="Изображение непотопляемой селфи-палки">
+								<div class="product__link-container">
+									<a href="#" class="btn product__btn font-gilroy-eb"
+										aria-label="Добавить товар в корзину">В корзину</a>
+									<a href="#" class="product__link-comparison font-sans-300"
+										aria-label="Добавить товар в список сравнения">Добавить к сравнению</a>
+								</div>
+							</div>
+							<div class="product__article-text">
+								<a href="#">
+									<h3 class="font-gilroy-eb">Непотопляемая селфи-палка</h3>
+								</a>
+								<p class="product__article-paragraph font-gilroy-l">2 500 руб.</p>
+							</div>
+						</article>
+						<article class="product__article product__hand">
+							<div class="product__img-container product__img-new" tabindex="0">
+								<img src="img/selfie-stick-hand.jpg" width="360" height="380"
+									alt="Изображение селфи-палки «Следуй за мной»">
+								<div class="product__link-container">
+									<a href="#" class="btn product__btn font-gilroy-eb"
+										aria-label="Добавить товар в корзину">В корзину</a>
+									<a href="#" class="product__link-comparison font-sans-300"
+										aria-label="Добавить товар в список сравнения">Добавить к сравнению</a>
+								</div>
+							</div>
+							<div class="product__article-text">
+								<a href="#">
+									<h3 class="font-gilroy-eb">Селфи-палка «Следуй за мной»</h3>
+								</a>
+								<p class="product__article-paragraph font-gilroy-l">4 900 руб.</p>
+							</div>
+						</article>
+					</div>
+					<div class="catalog__pagination pagination">
+						<ul class="pagination__list">
+							<li>
+								<a
+									class="pagination__link pagination__button pagination__button--on font-gilroy-eb">Назад</a>
+							</li>
+							<li>
+								<ul class="pagination__list">
+									<li>
+										<a
+											class="pagination__link pagination__item-numbering pagination__item-numbering--on font-gilroy-eb">1</a>
+									</li>
+									<li>
+										<a href="#" class="pagination__link pagination__item-numbering font-gilroy-eb"
+											aria-label="Открыть вторую страницу с селфи-палками">2</a>
+									</li>
+									<li>
+										<a href="#" class="pagination__link pagination__item-numbering font-gilroy-eb"
+											aria-label="Открыть третью страницу с селфи-палками">3</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="pagination__link pagination__button font-gilroy-eb"
+									aria-label="Перейти на следующую страницу с селфи-палками">Вперед</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-container footer--flex site-wrapper">
+			<div class="footer__address-container">
+				<a class="logo-link" href="index.html">
+					<img src="img/svg/logo-device-footer.svg" width="163" height="35" alt="Device">
+				</a>
+				<address class="footer__address font-sans-300">г. Москва, ул. Строителей, 15</address>
+			</div>
+			<div class="footer__links footer--flex">
+				<nav class="footer__navigation user-navigation footer--flex">
+					<ul class="user-navigation-container footer--flex">
+						<li class="user-navigation__item-footer">
+							<a class="user-navigation__item-link user-navigation__item-link--footer user-navigation__entrance-footer font-sans-300"
+								href="#" aria-label="Открыть страницу входа в личный кабинет">Валентин Петухов</a>
+						</li>
+						<li class="user-navigation__item-footer user-navigation__item-footer--exit">
+							<a class="user-navigation__item-link user-navigation__item-link--footer font-sans-300"
+								href="#" aria-label="Открыть страницу входа в личный кабинет">Выйти</a>
+						</li>
+						<li class="user-navigation__item-footer">
+							<a class="user-navigation__item-link user-navigation__item-link--footer user-navigation__comparison-footer font-sans-300"
+								href="#" aria-label="Открыть страницу сравнения товаров">Сравнить</a>
+						</li>
+						<li class="user-navigation__item-footer">
+							<a class="user-navigation__item-link user-navigation__item-link--footer user-navigation__basket-footer font-sans-300"
+								href="#" aria-label="Открыть страницу корзины">Корзина</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer__navigation-container footer--flex">
+					<div class="footer__site-navigation footer--flex">
+						<nav class="footer__navigation site-navigation">
+							<ul class="footer--flex site-navigation__list">
+								<li class="site-navigation__item-footer">
+									<a class="site-navigation__link site-navigation__link--white font-gilroy-eb"
+										href="#" aria-label="Открыть страницу доставки">Доставка</a>
+								</li>
+								<li class="site-navigation__item-footer">
+									<a class="site-navigation__link site-navigation__link--white font-gilroy-eb"
+										href="#" aria-label="Открыть страницу с информацией о гарантии">Гарантия</a>
+								</li>
+								<li class="site-navigation__item-footer">
+									<a class="site-navigation__link site-navigation__link--white font-gilroy-eb"
+										href="#" aria-label="Открыть страницу наших контактов">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<ul class="social-container--footer footer--flex site-navigation__list">
+							<li class="footer__social-icon">
+								<a href="#" aria-label="Перейти на нашу страницу Facebook">
+									<img src="img/svg/fb.svg" width="32" height="32" alt="Логотип Facebook">
+								</a>
+							</li>
+							<li class="footer__social-icon">
+								<a href="#" aria-label="Перейти на нашу страницу Instagram">
+									<img src="img/svg/instagram.svg" width="32" height="32" alt="Логотип Instagram">
+								</a>
+							</li>
+							<li class="footer__social-icon">
+								<a href="#" aria-label="Перейти на нашу страницу Twitter">
+									<img src="img/svg/twitter.svg" width="32" height="32" alt="Логотип Twitter">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__user-navigation footer--flex">
+						<a class="user-navigation__phone-footer font-sans-300" href="tel:74954959595"
+							aria-label="Позвонить нам по телефону: +74954959595">Тел.: +7 (495) 495-95-95</a>
+						<a class="user-navigation__logo-footer" href="https://htmlacademy.ru/intensive/htmlcss"
+							aria-label="Перейти на страницу курса HTML Academy">
+							<img src="img/svg/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
